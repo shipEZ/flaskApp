@@ -1,0 +1,31 @@
+{% include "adminlte/header.html" %}
+{% include "adminlte/sidebar.html" %}
+<link type="text/css" rel="stylesheet" href="http://www.dreamtemplate.com/dreamcodes/contact_forms/css/tsc_form_contact_dark.css" />
+<link type="text/css" rel="stylesheet" href="http://www.dreamtemplate.com/dreamcodes/contact_forms/css/tsc_form_contact_light.css" />
+ 
+<script type="text/javascript" src="http://www.dreamtemplate.com/dreamcodes/contact_forms/js/tsc_form_contact.js"></script>
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+    	<div style="float:right; width:300px">
+    		<h4 style="margin:3%; margin-top:10%; padding-right:20px">
+    		450 townsend st;<br>
+    		San Francisco<br> 
+    		CA - 94107<br>
+    		ph.no: +1 858-best-num</h4>
+    	</div>
+	  <form action="/dummy" class="tsc_form_contact_light">
+	    <label for="name">Name <span>(required)</span></label>
+	    <input type="text" name="name" class="form-input" required />
+	    <label for="email">Email <span>(required)</span></label>
+	    <input type="email" name="email" class="form-input" required />
+	    <label for="subject">Subject <span>(optional)</span></label>
+	    <input type="text" name="subject" class="form-input" />
+	    <label for="message">Message <span>(required)</span></label>
+	    <textarea name="message" class="form-input" required></textarea>
+	    <input class="form-btn" type="submit" value="Send Message" />
+	  </form>
+    </section>
+    </div>
+  {% include "adminlte/footer.html" %}

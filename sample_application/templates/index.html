@@ -1,0 +1,65 @@
+{% extends "adminlte/base_without_nav.html" %}
+
+{% block title %}Log In{% endblock %}
+{% block description %}Log into your account!{% endblock %}
+{% block bodytag %}login-page{% endblock %}
+
+{% block body %}
+
+  <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#btnSignUpUnused').click(function() {
+          $.ajax({
+              url: '/login',
+           // data: $('form').serialize(),
+              type: 'POST',
+              success: function(response) {
+                  console.log("logging in");
+                  console.log(response);
+              },
+              error: function(error) {
+                  console.log(error);
+              }
+          });
+      });
+    });
+    </script>
+
+  <div class="login-box">
+    <div class="login-logo">
+      <strong>SHIP</strong>EASY
+    </div>
+    <div class="login-box-body">
+      <p>Log into your account!</p>
+      {# Display errors (if there are any). #}
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      {# Render the login form. #}
+      <form action="{{ url_for('index') }}" method="POST">
+        <div class="form-group has-feedback">
+          <input type="email" name="email" placeholder="Username or Email" required="true" class="form-control">
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input type="password" name="password" placeholder="Password" required="true" class="form-control">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+        {{ form.csrf_token }}
+        <div class="row">
+          <div class="col-xs-4 col-xs-offset-8">
+            <button type="submit" id="btnSignUp" class="btn btn-primary btn-block btn-flat">Log In</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

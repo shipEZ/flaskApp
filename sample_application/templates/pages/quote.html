@@ -1,0 +1,19 @@
+{% include "adminlte/header.html" %}
+{% include "adminlte/sidebar.html" %}
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <link rel="stylesheet" href="https://embed.calculoid.com/styles/main.css" />
+        <script src="https://embed.calculoid.com/scripts/combined.min.js"></script>
+        <div ng-app="calculoid" ng-controller="CalculoidMainCtrl" ng-init="init({calcId:12946,apiKey:'5741b3db6c272'})" ng-include="load()"></div> 
+        <input type="text" ng-model="field.value" class="form-control ng-pristine ng-valid ng-touched" id="inputValue" placeholder="Your email address..">
+       <!-- <button type="button" style="margin:30px; align:center" class="btn btn-primary" ng-click="saveResult(field)"><span ng-if="!field.params.buttonText" class="ng-scope">Get Quotes</span>--><a href="/dummy" style="margin:30px; align:center" class="btn btn-primary">Get Quotes</a>
+        </button>
+    </section>
+    </div>
+  {% include "adminlte/footer.html" %}
+<!--{% include "adminlte/scriptFooter.html" %}
+<link rel="stylesheet" href="https://embed.calculoid.com/styles/main.css" />
+<script src="https://embed.calculoid.com/scripts/combined.min.js"></script>
+<div ng-app="calculoid" ng-controller="CalculoidMainCtrl" ng-init="init({calcId:12948,apiKey:'5741b3db6c272'})" ng-include="load()"></div>
