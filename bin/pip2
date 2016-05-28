@@ -1,4 +1,4 @@
-#!/home/sachin/code/git/shipeasy/flaskWebsite/flask-adminlte/bin/python
+#!/home/sachin/code/git/shipeasy/flaskWebsite/flaskApp/bin/python
 
 # -*- coding: utf-8 -*-
 import re
