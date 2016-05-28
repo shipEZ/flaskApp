@@ -1,1 +1,1 @@
-web: python shipeasy.py --log-file -
+web: python run_sample_app.py --log-file -
