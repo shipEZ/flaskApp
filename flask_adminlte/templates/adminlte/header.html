@@ -37,7 +37,7 @@
     $.widget.bridge('uibutton', $.ui.button);
   </script>
   <!-- Bootstrap 3.3.6 -->
-  <script type="text/javascript" src="{{ adminlte_find_resource('js/bootstrap.min.js', cdn='local') }}"></script>
+  <script type="text/javascript" src="{{ adminlte_find_resource('js/bootstrap.min.js', cdn='local', use_minified=False) }}"></script>
   <!-- Morris.js charts -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
   <script type="text/javascript" src="{{ adminlte_find_resource('plugins/morris/morris.min.js', cdn='local', use_minified=False) }}"></script>
@@ -63,7 +63,7 @@
   <script type="text/javascript" src="{{ adminlte_find_resource('js/AdminLTE/app.min.js', cdn='local', use_minified=False) }}"></script>
   <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
    <script type="text/javascript" src="{{ adminlte_find_resource('js/AdminLTE/pages/dashboard.js', cdn='local', use_minified=False) }}"></script>
-   <script type="text/javascript" src="{{ adminlte_find_resource('js/AdminLTE/pages/dashboard2c.js', cdn='local', use_minified=False) }}"></script>
+   <script type="text/javascript" src="{{ adminlte_find_resource('js/AdminLTE/pages/dashboard2.js', cdn='local', use_minified=False) }}"></script>
   <!-- AdminLTE for demo purposes -->
   <script type="text/javascript" src="{{ adminlte_find_resource('js/AdminLTE/demo.js', cdn='local', use_minified=False) }}"></script>
 </head>
@@ -72,7 +72,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="#" class="logo">
+    <a href="/login" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>S</b>EZ</span>
       <!-- logo for regular state and mobile devices -->
@@ -101,7 +101,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ url_for('static', filename='img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                        <img src="{{ url_for('static', filename='rutika.jpg') }}" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Client 1
@@ -138,7 +138,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="{{ url_for('static', filename='img/user3-128x128.jpg') }}" class="img-circle" alt="User Image">
+                        <img src="{{ url_for('static', filename='rutika.jpg') }}" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Sales Department
@@ -313,7 +313,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="/profile" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
                   <a href="/" class="btn btn-default btn-flat">Sign out</a>

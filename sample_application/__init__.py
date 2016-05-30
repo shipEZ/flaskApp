@@ -54,6 +54,10 @@ def create_app(configfile=None):
     def invoice():
         return render_template('pages/examples/invoice.html', current_user=current_user)
 
+    @app.route('/invoicePrint')
+    def invoicePrint():
+        return render_template('pages/examples/invoice-print.html', current_user=current_user)
+
     @app.route('/track')
     def calendar():
         return render_template('pages/track.html', current_user=current_user)
