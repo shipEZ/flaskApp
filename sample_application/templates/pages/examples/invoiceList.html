@@ -1,0 +1,127 @@
+{% include "adminlte/header.html" %}
+{% include "adminlte/sidebar.html" %}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Inoice Table
+        <!--<small>advanced tables</small>-->
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Tables</a></li>
+        <li class="active">Data table</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Sample table</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example2" class="table table-bordered table-hover">
+<thead><tr><td>Payment Status</td>
+<td>Company</td>
+<td>Customer Name</td>
+<td>Phone Number</td>
+<td>Amount Billed</td>
+<td>Balance Remaining</td>
+<td>Shipment Status</td>
+<td>Order No</td>
+</tr>
+</thead>
+<tbody>
+<tr><td>Late</td>
+<td>Company A</td>
+<td>John Doe</td>
+<td>9920500236</td>
+<td>INR 2,00,000</td>
+<td>INR 2,00,000</td>
+<td>Delivered</td>
+<td>OR124</td>
+</tr>
+<tr><td>Late</td>
+<td>Company B</td>
+<td>John Doe</td>
+<td>9920500237</td>
+<td>INR 50,000</td>
+<td>INR 2,00,000</td>
+<td>Delayed</td>
+<td>OR125</td>
+</tr>
+<tr><td>Paid Partially</td>
+<td>Company C</td>
+<td>John Doe</td>
+<td>9920500238</td>
+<td>INR 10,00,000</td>
+<td>INR 2,00,000</td>
+<td>Delivered</td>
+<td>OR126</td>
+</tr>
+<tr><td>Upcoming Payment</td>
+<td>Company D</td>
+<td>John Doe</td>
+<td>9920500239</td>
+<td>INR 2,00,000</td>
+<td>INR 2,00,000</td>
+<td>In Transit</td>
+<td>OR127</td>
+</tr>
+<tr><td>Upcoming Payment</td>
+<td>Company E</td>
+<td>John Doe</td>
+<td>9920500240</td>
+<td>INR 50,000</td>
+<td>INR 50,000</td>
+<td>In Transit</td>
+<td>OR128</td>
+</tr>
+<tr><td>Paid in Full</td>
+<td>Company C</td>
+<td>John Doe</td>
+<td>9920500241</td>
+<td>INR 10,00,000</td>
+<td>Paid</td>
+<td>Delivered</td>
+<td>OR129</td>
+</tr>
+                </tbody>
+                
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          </div>
+          </div>
+          </section>
+          </div>
+          <!-- /.box -->
+  <!-- /.content-wrapper -->
+{% include "adminlte/footer.html" %}
+
+  
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<script>
+  $(function () {
+    $("#example1").DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
+</body>
+</html>
