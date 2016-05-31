@@ -92,7 +92,7 @@ def create_app(configfile=None):
 
     @app.route('/shipments')
     def shipments():
-        return render_template('pages/tables/datao.html', current_user=current_user)
+        return render_template('pages/tables/data.html', current_user=current_user)
 
     @app.route('/dummy')
     def dummy():
