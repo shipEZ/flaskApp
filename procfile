@@ -1,1 +1,1 @@
-web: gunicorn shipeasy:app --log-file -
+web: python run_sample_app.py --log-file -
